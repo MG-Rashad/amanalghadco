@@ -23,81 +23,75 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="pt-12 md:pt-16 lg:pt-20 pb-16 md:pb-20 lg:pb-24 bg-background">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+    <section id="contact" className="pt-10 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 md:mb-12 lg:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight text-balance mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 lg:mb-14">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground leading-tight text-balance mb-3 sm:mb-4">
             {t("contact.title")}
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground">
             {t("contact.subtitle")}
           </p>
         </div>
 
         {/* Side-by-Side Layout */}
-        <div className="grid lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-14 max-w-6xl mx-auto">
           
           {/* Left Column - Contact Info */}
-          <div className="space-y-10">
+          <div className="space-y-6 sm:space-y-8 lg:space-y-10">
             {/* Address */}
-            <div className="space-y-8">
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-2xl bg-gray-200 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-foreground" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground text-lg mb-1">{t("contact.address_title")}</h4>
-                  <p className="text-muted-foreground">{t("contact.address")}</p>
-                </div>
+            <div className="flex items-start gap-4 sm:gap-5">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gray-200 flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-foreground" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground text-base sm:text-lg mb-1">{t("contact.address_title")}</h4>
+                <p className="text-sm sm:text-base text-muted-foreground">{t("contact.address")}</p>
               </div>
             </div>
 
             {/* Phone */}
-            <div className="space-y-8">
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-2xl bg-gray-200 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-foreground" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground text-lg mb-1">{t("contact.form_phone")}</h4>
-                  <p className="text-muted-foreground" dir="ltr">+218 91 0340420</p>
-                </div>
+            <div className="flex items-start gap-4 sm:gap-5">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gray-200 flex items-center justify-center flex-shrink-0">
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-foreground" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground text-base sm:text-lg mb-1">{t("contact.form_phone")}</h4>
+                <p className="text-sm sm:text-base text-muted-foreground" dir="ltr">+218 91 0340420</p>
               </div>
             </div>
 
             {/* Email */}
-            <div className="space-y-8">
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-2xl bg-gray-200 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-foreground" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground text-lg mb-1">{t("contact.email_label")}</h4>
-                  <p className="text-muted-foreground">info@amanalghad.com</p>
-                </div>
+            <div className="flex items-start gap-4 sm:gap-5">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gray-200 flex items-center justify-center flex-shrink-0">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-foreground" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground text-base sm:text-lg mb-1">{t("contact.email_label")}</h4>
+                <p className="text-sm sm:text-base text-muted-foreground">info@amanalghad.com</p>
               </div>
             </div>
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-muted/80 rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10">
+          <div className="bg-muted/80 rounded-xl sm:rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8">
             {submitted ? (
-              <div className="h-full flex items-center justify-center text-center py-16">
+              <div className="h-full flex items-center justify-center text-center py-12 sm:py-16">
                 <div>
-                  <div className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle className="w-10 h-10 text-accent" />
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                    <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 sm:mb-3">
                     {t("contact.success")}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-sm sm:text-base text-muted-foreground">
                     {t("contact.subtitle")}
                   </p>
                   <Button 
                     variant="outline" 
-                    className="mt-6 rounded-full bg-transparent"
+                    className="mt-5 sm:mt-6 rounded-full bg-transparent"
                     onClick={() => setSubmitted(false)}
                   >
                     {t("contact.form_submit")}
@@ -105,35 +99,35 @@ export function ContactSection() {
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-5">
+              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-foreground">{t("contact.form_name")}</Label>
-                    <Input id="name" required className="h-12 bg-white border-0" />
+                    <Label htmlFor="name" className="text-foreground text-sm sm:text-base">{t("contact.form_name")}</Label>
+                    <Input id="name" required className="h-11 sm:h-12 bg-white border-0" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="company" className="text-foreground">{t("contact.form_company")}</Label>
-                    <Input id="company" required className="h-12 bg-white border-0" />
+                    <Label htmlFor="company" className="text-foreground text-sm sm:text-base">{t("contact.form_company")}</Label>
+                    <Input id="company" required className="h-11 sm:h-12 bg-white border-0" />
                   </div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-5">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-foreground">{t("contact.form_phone")}</Label>
-                    <Input id="phone" type="tel" required className="h-12 bg-white border-0" />
+                    <Label htmlFor="phone" className="text-foreground text-sm sm:text-base">{t("contact.form_phone")}</Label>
+                    <Input id="phone" type="tel" required className="h-11 sm:h-12 bg-white border-0" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-foreground">{t("contact.form_email")}</Label>
-                    <Input id="email" type="email" required className="h-12 bg-white border-0" />
+                    <Label htmlFor="email" className="text-foreground text-sm sm:text-base">{t("contact.form_email")}</Label>
+                    <Input id="email" type="email" required className="h-11 sm:h-12 bg-white border-0" />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-foreground">{t("contact.form_message")}</Label>
+                  <Label htmlFor="message" className="text-foreground text-sm sm:text-base">{t("contact.form_message")}</Label>
                   <Textarea id="message" rows={5} required className="bg-white border-0 resize-none" />
                 </div>
 
-                <Button type="submit" className="w-full h-12 rounded-full text-base" disabled={isSubmitting}>
+                <Button type="submit" className="w-full h-11 sm:h-12 rounded-full text-sm sm:text-base" disabled={isSubmitting}>
                   {isSubmitting ? "..." : t("contact.form_submit")}
                 </Button>
               </form>

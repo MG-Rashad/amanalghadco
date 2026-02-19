@@ -39,42 +39,42 @@ export function HeroSection() {
     : ["Président", "Al Yusr", "Pav"]
 
   return (
-    <section id="hero" className="min-h-[75vh] bg-background pt-32 md:pt-36 lg:pt-40">
+    <section id="hero" className="min-h-[75vh] bg-background pt-24 sm:pt-28 md:pt-32 lg:pt-36">
       {/* Responsive top padding for proper spacing */}
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center min-h-[calc(75vh-5rem)] py-6 md:py-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 xl:gap-20 items-center min-h-[calc(75vh-6rem)] py-4 sm:py-6 lg:py-8">
           {/* Text Content - Always Order 1 (Start) */}
-          <div className="space-y-6 md:space-y-8 order-1 text-start">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-[1.1] tracking-tight text-balance">
+          <div className="space-y-5 sm:space-y-6 lg:space-y-8 order-1 text-start">
+            <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-foreground leading-[1.15] tracking-tight text-balance">
               {t("hero.title")}
             </h1>
             
-            <p className="text-sm md:text-base text-muted-foreground max-w-lg leading-relaxed">
+            <p className="text-sm sm:text-base text-muted-foreground max-w-lg leading-relaxed">
               {t("hero.subtitle")}
             </p>
 
-            {/* Brands - Changed to text-xl font-semibold to match About Section subtitles */}
-            <div>
-              <p className="text-xl font-semibold text-black mb-6 text-center">
+            {/* Brands */}
+            <div className="pt-2">
+              <p className="text-base sm:text-lg lg:text-xl font-semibold text-black mb-4 sm:mb-5 lg:mb-6 text-center">
                 {t("hero.brands_label")}
               </p>
-              <div className="flex flex-wrap items-center gap-8 justify-center">
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6 lg:gap-8 justify-center">
                 {brands.map((brand) => (
-                  <span key={brand} className="text-xl font-semibold text-[#FD820A]">
+                  <span key={brand} className="text-lg sm:text-xl font-semibold text-[#FD820A]">
                     {brand}
                   </span>
                 ))}
               </div>
             </div>
 
-            {/* Buttons - Moved DOWN */}
-            <div className="flex flex-wrap gap-4 pt-4 justify-center">
-              <Button asChild size="lg" className="rounded-full px-8 h-12">
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center">
+              <Button asChild size="lg" className="rounded-full px-6 sm:px-8 h-11 sm:h-12 w-full sm:w-auto">
                 <Link href="#products">
                   {t("hero.cta_primary")}
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full px-8 h-12 bg-transparent">
+              <Button asChild variant="outline" size="lg" className="rounded-full px-6 sm:px-8 h-11 sm:h-12 bg-transparent w-full sm:w-auto">
                 <Link href="#contact">
                   {t("hero.cta_secondary")}
                 </Link>
@@ -83,10 +83,10 @@ export function HeroSection() {
           </div>
 
           {/* Image Slider - Always Order 2 (End) */}
-          <div className="relative order-2">
-            <div className="relative aspect-[4/3] max-w-md mx-auto">
+          <div className="relative order-2 mt-4 sm:mt-0">
+            <div className="relative aspect-[4/3] max-w-sm sm:max-w-md mx-auto">
               {/* Image Container */}
-              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-muted">
+              <div className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden bg-muted">
                 {sliderImages.map((src, index) => {
                   // Determine animation direction based on RTL
                   let translateClass = "translate-x-0";
@@ -111,7 +111,7 @@ export function HeroSection() {
                         src={src || "/placeholder.svg"}
                         alt={`Product ${index + 1}`}
                         fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 450px"
+                        sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 450px"
                         className="object-cover"
                         priority={index === 0}
                       />
