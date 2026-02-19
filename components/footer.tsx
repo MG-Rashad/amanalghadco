@@ -25,17 +25,14 @@ export function Footer() {
           
             {/* Column 1: Brand */}
             <div className="space-y-4">
-              <div className="h-12 sm:h-14">
-                <Image
-                  src="/images/logo.jpg"
-                  alt="Aman Al-Ghad"
-                  width={120}
-                  height={64}
-                  style={{ width: 'auto', height: 'auto' }}
-                  className="h-full w-auto object-contain"
-                  priority
-                />
-              </div>
+              <Image
+                src="/images/logo.jpg"
+                alt="Aman Al-Ghad"
+                width={120}
+                height={64}
+                className="h-12 sm:h-14 w-auto"
+                priority
+              />
               <p className="text-background/70 leading-relaxed text-sm max-w-sm">
                 {t("footer.desc")}
               </p>
