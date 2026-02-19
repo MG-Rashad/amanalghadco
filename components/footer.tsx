@@ -31,6 +31,7 @@ export function Footer() {
                   alt="Aman Al-Ghad"
                   width={120}
                   height={64}
+                  style={{ width: 'auto', height: 'auto' }}
                   className="h-full w-auto object-contain"
                   priority
                 />
