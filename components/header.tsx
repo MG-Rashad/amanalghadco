@@ -39,13 +39,13 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0 h-12 sm:h-14">
             <Image
               src="/images/logo.jpg"
               alt="Aman Al-Ghad"
               width={110}
               height={56}
-              className="h-12 sm:h-14 w-auto object-contain"
+              className="h-full w-auto object-contain"
               priority
             />
           </Link>
