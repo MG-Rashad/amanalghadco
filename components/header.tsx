@@ -45,7 +45,6 @@ export function Header() {
               alt="Aman Al-Ghad"
               width={110}
               height={56}
-              style={{ width: 'auto', height: 'auto' }}
               className="h-12 sm:h-14 w-auto object-contain"
               priority
             />
