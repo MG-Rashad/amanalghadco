@@ -13,7 +13,7 @@ Key Company Information:
 - Company Name: Aman Al-Ghad (أمان الغد)
 - Location: Tripoli, Libya
 - Phone: +218 91 0340420
-- Email: info@amanalghad.ly
+- Email: info@amanalghad.com
 - We are the official distributor for United Integrated Group
 - We distribute high-quality food products including dairy, oils, pasta, and beverages
 

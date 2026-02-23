@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     ],
     apple: '/images/logo.jpg',
   },
-  generator: 'v0.app'
+  
 }
 
 export const viewport: Viewport = {
